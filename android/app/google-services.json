@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "495650495249",
+    "project_id": "physics-math-app",
+    "storage_bucket": "physics-math-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495650495249:android:635381866f1dd1b3170ab0",
+        "android_client_info": {
+          "package_name": "com.example.playstore_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495650495249-de5tc108v00al3sntavu8hgg0vn02f41.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPO-E2kSa7nq5kDNEbcFmuvxUuRVdyS1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495650495249-de5tc108v00al3sntavu8hgg0vn02f41.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
