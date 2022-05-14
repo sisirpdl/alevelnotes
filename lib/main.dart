@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import './screens/readerscreen.dart';
@@ -27,24 +28,30 @@ class _MyAppState extends State<MyApp> {
       builder: (context, _) {
         final themeProvider = Provider.of<ThemeProvider>(context);
         return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: '</appname>',
-          themeMode: themeProvider.themeMode,
-          theme: MyThemes.lightTheme,
-          darkTheme: MyThemes.darkTheme,
-          routes: {
-            '/reader_screen': (context) => ReaderScreen(),
-          },
-          // home: const MyHomePage(),
-          //
-                   
-          home: AnimatedSplashScreen(
-            splash: "assets/images/download.png",
-            nextScreen: RootApp(),
-            splashTransition: SplashTransition.sizeTransition,
-            pageTransitionType: PageTransitionType.leftToRight,
-          ),
-          // home: RootApp(),
-        );
+            debugShowCheckedModeBanner: false,
+            title: '</appname>',
+            themeMode: themeProvider.themeMode,
+            theme: MyThemes.lightTheme,
+            darkTheme: MyThemes.darkTheme,
+            routes: {
+              '/reader_screen': (context) => ReaderScreen(),
+            },
+            // home: const MyHomePage(),
+            //
+
+            home: AnimatedSplashScreen(
+              splash: Lottie.asset("assets/splash.json"),
+              // screenFunction: () async {
+              //   return RootApp();
+              // },
+              nextScreen: RootApp(),
+              duration: 4000,
+              splashIconSize: 250,
+              splashTransition: SplashTransition.decoratedBoxTransition,
+              pageTransitionType: PageTransitionType.bottomToTop,
+
+              animationDuration: const Duration(seconds: 2),
+            ));
+        // home: RootApp(),
       });
 }
