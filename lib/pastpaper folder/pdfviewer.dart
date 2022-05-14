@@ -1,9 +1,8 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
-import 'package:dio/dio.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import './Download.dart';
+import 'package:open_file/open_file.dart';
 
 class PDFViewer extends StatefulWidget {
   final String title;
@@ -33,20 +32,6 @@ class _PDFViewerState extends State<PDFViewer> {
     //             ViewPDF(doc))); //Notice the Push Route once this is done.
   }
 
-  Future<File?> downloadFile(String url) async {
-    final dir = await getApplicationDocumentsDirectory();
-    final file =
-        File('Past Papers/${widget.year}/${widget.month}/${widget.title}');
-    final response = await Dio().get(url);
-
-    final raf = file.openSync(mode: FileMode.write);
-    raf.writeFromSync(response.data);
-    await raf.close();
-    return file;
-    // ScaffoldMessenger.of(context)
-    //     .showSnackBar(SnackBar(content: Text('Downloaded ${ref.name}')));
-  }
-
   @override
   void initState() {
     // TODO: implement initState
@@ -58,7 +43,34 @@ class _PDFViewerState extends State<PDFViewer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () async {
+                await showDialog(
+                    context: context,
+                    builder: (context) => DownloadDialog(
+                        widget.title, widget.month, widget.year));
+
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Row(
+                    children: [
+                      const Text('File succesfully added to downloads!'),
+                      Expanded(
+                          child: TextButton(
+                        onPressed: (() {
+                          OpenFile.open("/sdcard/download/${widget.title}.pdf");
+                        }),
+                        child: const Text('Open'),
+                      ))
+                    ],
+                  ),
+                  duration: const Duration(seconds: 2),
+                ));
+              },
+              icon: const Icon(Icons.download))
+        ],
+      ),
       body: Container(
         child: url.isEmpty
             ? const Center(child: CircularProgressIndicator())

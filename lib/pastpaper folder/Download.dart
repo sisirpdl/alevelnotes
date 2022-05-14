@@ -6,7 +6,9 @@ import 'package:path_provider/path_provider.dart';
 
 class DownloadDialog extends StatefulWidget {
   final String? title;
-  DownloadDialog(this.title);
+  final String? month;
+  final String? year;
+  DownloadDialog(this.title, this.month, this.year);
 
   @override
   State<DownloadDialog> createState() => _DownloadDialogState();
@@ -18,7 +20,7 @@ class _DownloadDialogState extends State<DownloadDialog> {
 
   void startdownloading() async {
     String downloadURL = await firebase_storage.FirebaseStorage.instance
-        .ref('Physics Content/${widget.title}.pdf')
+        .ref('Past Papers/${widget.year}/${widget.month}/${widget.title}')
         .getDownloadURL();
     print(downloadURL);
 
