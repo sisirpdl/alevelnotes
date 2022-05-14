@@ -1,5 +1,5 @@
 const mathsNotesUI = {
-  'image': 'assets/images/dog_reading_vector.svg',
+  'image': 'assets/images/sum.svg',
   'title': 'Maths',
-  'subTitle': "pie"
+  'subTitle': "e^{i . pi} = -1"
 };

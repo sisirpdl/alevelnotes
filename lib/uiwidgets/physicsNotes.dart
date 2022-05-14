@@ -16,6 +16,7 @@ class PhysicsNotes extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(left: appPadding, right: appPadding),
+      
       child: Stack(
         alignment: Alignment.topRight,
         clipBehavior: Clip.none,
@@ -71,15 +72,17 @@ class PhysicsNotes extends StatelessWidget {
                   ),
                   child: InkWell(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => PhysicsScreen()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PhysicsScreen()));
                     },
                     child: const Text(
                       'Open',
                       style: TextStyle(
-                        fontSize: 15.0,
+                        fontSize: 20.0,
                         color: textWhite,
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.w200,
                       ),
                     ),
                   ),
@@ -89,8 +92,8 @@ class PhysicsNotes extends StatelessWidget {
           ),
           Positioned(
             top: -20.0,
-            right: 10.0,
-            child: Container(
+            left: -35.0,
+            child: SizedBox(
               height: size.width * .4,
               child: SvgPicture.asset(
                 physicsNotesUI['image'].toString(),

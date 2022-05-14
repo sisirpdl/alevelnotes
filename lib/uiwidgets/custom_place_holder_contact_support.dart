@@ -7,18 +7,20 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:playstore_app/theme/theme_provider.dart';
 
-class CustomPlaceHolder extends StatefulWidget {
-  const CustomPlaceHolder(
+class CustomPlaceHolderContactSupport extends StatefulWidget {
+  const CustomPlaceHolderContactSupport(
       {Key? key, required this.title, this.isSwitch = false})
       : super(key: key);
   final String title;
   final bool isSwitch;
 
   @override
-  CustomPlaceHolderState createState() => CustomPlaceHolderState();
+  CustomPlaceHolderContactSupportState createState() =>
+      CustomPlaceHolderContactSupportState();
 }
 
-class CustomPlaceHolderState extends State<CustomPlaceHolder> {
+class CustomPlaceHolderContactSupportState
+    extends State<CustomPlaceHolderContactSupport> {
   bool switchValue = false;
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,6 @@ class CustomPlaceHolderState extends State<CustomPlaceHolder> {
             ),
             textAlign: TextAlign.center,
           ),
-          Icon(Icons.picture_as_pdf_outlined)
         ],
       ),
     );

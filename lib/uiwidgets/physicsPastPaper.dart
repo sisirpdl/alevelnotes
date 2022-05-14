@@ -9,10 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '/screens/SyllabusScreen.dart';
 
-class PhysicsPastPaperWidget
- extends StatelessWidget {
-  const PhysicsPastPaperWidget
-  ({Key? key}) : super(key: key);
+class PhysicsPastPaperWidget extends StatelessWidget {
+  const PhysicsPastPaperWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -74,15 +72,17 @@ class PhysicsPastPaperWidget
                   ),
                   child: InkWell(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => PhysicsPastPaper()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PhysicsPastPaper()));
                     },
                     child: const Text(
                       'Open',
                       style: TextStyle(
-                        fontSize: 15.0,
+                        fontSize: 20.0,
                         color: textWhite,
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.w200,
                       ),
                     ),
                   ),
@@ -92,7 +92,7 @@ class PhysicsPastPaperWidget
           ),
           Positioned(
             top: -20.0,
-            right: 10.0,
+            left: -33.0,
             child: Container(
               height: size.width * .4,
               child: SvgPicture.asset(

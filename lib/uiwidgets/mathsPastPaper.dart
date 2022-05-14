@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:playstore_app/datas/mathsNotesUI.dart';
 
 import 'package:flutter_svg/svg.dart';
-import '/screens/SyllabusScreen.dart';
+
 
 class MathsPastPaperWidget extends StatelessWidget {
   const MathsPastPaperWidget({Key? key}) : super(key: key);
@@ -80,9 +80,9 @@ class MathsPastPaperWidget extends StatelessWidget {
                     child: const Text(
                       'Open',
                       style: TextStyle(
-                        fontSize: 15.0,
+                        fontSize: 20.0,
                         color: textWhite,
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.w200,
                       ),
                     ),
                   ),
@@ -92,8 +92,8 @@ class MathsPastPaperWidget extends StatelessWidget {
           ),
           Positioned(
             top: -20.0,
-            right: 10.0,
-            child: Container(
+            left: -33.0,
+            child: SizedBox(
               height: size.width * .4,
               child: SvgPicture.asset(
                 mathsNotesUI['image'].toString(),

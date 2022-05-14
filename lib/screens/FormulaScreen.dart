@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
 import '/widgets/Mathformula.dart';
 import '/widgets/Physicsformula.dart';
 
@@ -21,6 +22,7 @@ class FormulaScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: appbarColor,
           title: const Text('Formula Screen'),
+          actions: [ChangeThemeButtonWidget()],
           bottom: const TabBar(
             tabs: [
               Tab(

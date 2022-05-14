@@ -27,7 +27,7 @@ class MyThemes {
   static final darkTheme = ThemeData(
     // primaryColor: Colors.black,
     fontFamily: 'AkayaTelivigala',
-    scaffoldBackgroundColor: Color.fromARGB(255, 71, 71, 71),
+    scaffoldBackgroundColor: Color.fromARGB(227, 56, 53, 53),
     colorScheme: const ColorScheme.dark(),
   );
 }

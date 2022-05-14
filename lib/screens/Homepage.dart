@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playstore_app/uiwidgets/custom_place_holder_contact_support.dart';
 import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
 import 'package:playstore_app/theme/colors.dart';
 import 'package:playstore_app/datas/user_profile.dart';
@@ -62,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   clipper: BottomClipper(),
                   child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: 360,
+                      height: 278,
                       decoration:
                           const BoxDecoration(color: Color(0xFF132342))),
                 ),
@@ -96,11 +97,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       const SizedBox(height: spacer - 22),
 
                       //search
-                      const CustomSearchField(
-                        hintField: '"search hanni banauni ho?"',
-                        backgroundColor: background,
-                      ),
-                      const SizedBox(height: spacer - 26.0),
+                      // const CustomSearchField(
+                      //   hintField: '"search hanni banauni ho?"',
+                      //   backgroundColor: background,
+                      // ),
+                      // const SizedBox(height: spacer - 26.0),
 
                       //categoy card
                       const CustomCategoryCard(),
@@ -124,10 +125,16 @@ class _MyHomePageState extends State<MyHomePage> {
             // const SizedBox(
             //   height: spacer,
             // ),
-            const CustomHeading(
-                title: "Notes", subTitle: "First Edition", color: Colors.black),
+            CustomHeading(
+                title: "Notes",
+                subTitle: "Premium Edition",
+                color: Provider.of<ThemeProvider>(context).themeMode ==
+                        ThemeMode.dark
+                    // ? Color.fromARGB(255, 62, 61, 61)
+                    ? const Color.fromARGB(255, 255, 255, 255)
+                    : const Color.fromARGB(255, 0, 0, 0)),
             const SizedBox(
-              height: spacer - 15,
+              height: spacer - 30,
             ),
             const CustomCategoryCardCopy(),
             const SizedBox(
@@ -137,9 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // const SizedBox(
             //   height: spacer,
             // ),
-            const CustomPlaceHolder(
-                title:
-                    "Have a great day !"),
+            const CustomPlaceHolderContactSupport(title: "Have a great day !"),
             // const SizedBox(
             //   height: spacer,
             // ),

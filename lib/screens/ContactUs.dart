@@ -15,6 +15,7 @@ import 'package:playstore_app/datas/account_menu_json.dart';
 import 'package:playstore_app/theme/colors.dart';
 import 'package:playstore_app/theme/padding.dart';
 import 'package:playstore_app/uiwidgets/custom_place_holder.dart';
+import 'package:playstore_app/uiwidgets/custom_place_holder_contact_support.dart';
 import 'package:playstore_app/uiwidgets/custom_title.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +47,7 @@ class AccountPageState extends State<AccountPage> {
     final textWhite =
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             // ? Color.fromARGB(255, 62, 61, 61)
-            ? const Color.fromARGB(255, 62, 61, 61)
+            ? const Color.fromARGB(227, 56, 53, 53)
             : const Color(0xFFFFFFFF);
 
     return Scaffold(
@@ -67,7 +68,6 @@ class AccountPageState extends State<AccountPage> {
 
   Widget getBody() {
     // var size = MediaQuery.of(context).size;
-
 
     return SingleChildScrollView(
       padding: const EdgeInsets.only(left: 0, top: 100),
@@ -92,7 +92,7 @@ class AccountPageState extends State<AccountPage> {
                         children: List.generate(
                           data.length,
                           (j) {
-                            return CustomPlaceHolder(
+                            return CustomPlaceHolderContactSupport(
                               title: data[j]['title'],
                               isSwitch: data[j]['isSwitch'],
                             );
@@ -109,12 +109,35 @@ class AccountPageState extends State<AccountPage> {
           Container(
             alignment: Alignment.center,
             // padding: const EdgeInsets.only(right: 30),
-            child: const Text(
+            child: Text(
               'V1.0.1',
-              style: TextStyle(fontSize: 14.0, color: textBlack),
+              style: TextStyle(
+                fontSize: 14.0,
+                color: Provider.of<ThemeProvider>(context).themeMode ==
+                        ThemeMode.dark
+                    // ? Color.fromARGB(255, 62, 61, 61)
+                    ? const Color.fromARGB(255, 255, 255, 255)
+                    : const Color.fromARGB(255, 0, 0, 0),
+              ),
             ),
           ),
-          const SizedBox(height: spacer),
+          const SizedBox(height: 30),
+           Container(
+            alignment: Alignment.center,
+            // padding: const EdgeInsets.only(right: 30),
+            child: Text(
+              '''Developed By Arun Joshi
+    and Shishir Poudel''',
+              style: TextStyle(
+                fontSize: 14.0,
+                color: Provider.of<ThemeProvider>(context).themeMode ==
+                        ThemeMode.dark
+                    // ? Color.fromARGB(255, 62, 61, 61)
+                    ? Color.fromARGB(255, 0, 255, 170)
+                    : Colors.blue,
+              ),
+            ),
+          ),
         ],
       ),
     );

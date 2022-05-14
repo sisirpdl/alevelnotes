@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import './screens/readerscreen.dart';
@@ -37,9 +38,19 @@ class _MyAppState extends State<MyApp> {
           },
           // home: const MyHomePage(),
           //
-                   
+
           home: AnimatedSplashScreen(
-            splash: "assets/images/download.png",
+            splash: Column(
+              children: [
+                Lottie.asset("assets/images/rocket_animation.json"),
+                const SizedBox(height: 68),
+                const Text('''Developed By Dr. Arun Joshi
+ and Prof. Shishir Poudel
+for beloved alevel students''',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,color: Color(0xFF132342)),)
+              ],
+            ),
+            duration: 4300,
+            splashIconSize: 500,
             nextScreen: RootApp(),
             splashTransition: SplashTransition.sizeTransition,
             pageTransitionType: PageTransitionType.leftToRight,

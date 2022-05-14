@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
 import '/models/dummylist.dart';
 import '/widgets/list_items.dart';
 
@@ -18,7 +19,7 @@ class _PhysicsScreenState extends State<PhysicsScreen> {
           'Physics',
           textAlign: TextAlign.center,
         ),
-        actions: [],
+        actions: [ChangeThemeButtonWidget()],
       ),
       // body: InkWell(
       //   onTap: () {

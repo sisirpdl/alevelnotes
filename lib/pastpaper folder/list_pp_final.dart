@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:playstore_app/pastpaper%20folder/pdfviewer.dart';
 import 'package:playstore_app/uiwidgets/custom_place_holder.dart';
+import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
 
 class ListPP extends StatelessWidget {
   final List<String> physicsPPdata;
@@ -15,14 +16,17 @@ class ListPP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text("physics past papers"),
+        actions: [ChangeThemeButtonWidget()],
+      ),
       body: SingleChildScrollView(
         child: Column(
             // spread operator used.
             children: [
               ...physicsPPdata.map((e) {
                 return Answer(
-                  title: e ,
+                  title: e,
                   month: month,
                   year: year,
                 );

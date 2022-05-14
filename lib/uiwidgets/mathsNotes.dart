@@ -1,4 +1,3 @@
-import 'package:playstore_app/datas/promotion.dart';
 import 'package:playstore_app/screens/Math_mainscreen.dart';
 import 'package:playstore_app/theme/colors.dart';
 import 'package:playstore_app/theme/padding.dart';
@@ -6,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:playstore_app/datas/mathsNotesUI.dart';
 
 import 'package:flutter_svg/svg.dart';
-import '/screens/SyllabusScreen.dart';
 
 class MathsNotes extends StatelessWidget {
   const MathsNotes({Key? key}) : super(key: key);
@@ -79,9 +77,9 @@ class MathsNotes extends StatelessWidget {
                     child: const Text(
                       'Open',
                       style: TextStyle(
-                        fontSize: 15.0,
+                        fontSize: 20.0,
                         color: textWhite,
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.w200,
                       ),
                     ),
                   ),
@@ -91,7 +89,7 @@ class MathsNotes extends StatelessWidget {
           ),
           Positioned(
             top: -20.0,
-            right: 10.0,
+            left: -30.0,
             child: Container(
               height: size.width * .4,
               child: SvgPicture.asset(
