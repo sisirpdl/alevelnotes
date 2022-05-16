@@ -1,6 +1,6 @@
 import 'package:playstore_app/datas/physicsNotesUI.dart';
 import 'package:playstore_app/datas/promotion.dart';
-import 'package:playstore_app/pastpaper%20folder/Physics_PP_mainscreen.dart';
+import 'package:playstore_app/Physics_Pastpaper/Physics_PP_mainscreen.dart';
 import 'package:playstore_app/screens/Math_mainscreen.dart';
 import 'package:playstore_app/screens/Physics_mainscreen.dart';
 import 'package:playstore_app/theme/colors.dart';
@@ -9,10 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '/screens/SyllabusScreen.dart';
 
-class PhysicsPastPaperWidget
- extends StatelessWidget {
-  const PhysicsPastPaperWidget
-  ({Key? key}) : super(key: key);
+class PhysicsPastPaperWidget extends StatelessWidget {
+  const PhysicsPastPaperWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -74,8 +72,10 @@ class PhysicsPastPaperWidget
                   ),
                   child: InkWell(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => PhysicsPastPaper()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PhysicsPastPaper()));
                     },
                     child: const Text(
                       'Open',

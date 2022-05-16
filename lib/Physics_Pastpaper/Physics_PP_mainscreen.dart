@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:playstore_app/theme/colors.dart';
-import 'map_of_pastpapers.dart';
-import './Physics_ListTile_module.dart';
+import '../models/map_of_pastpapers.dart';
+import 'package:playstore_app/Physics_Pastpaper/list_pp_final.dart';
 
 class PhysicsPastPaper extends StatelessWidget {
   const PhysicsPastPaper({super.key});
@@ -24,6 +24,29 @@ class PhysicsPastPaper extends StatelessWidget {
           );
         }),
         itemCount: Map.pastpapers.length,
+      ),
+    );
+  }
+}
+
+class PhysicsListTile extends StatelessWidget {
+  final String year;
+  final String month;
+  List<String> content;
+  PhysicsListTile(this.content, this.month, this.year, {Key? key})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: ((context) {
+          return ListPP(physicsPPdata: content, year: year, month: month);
+        })));
+      },
+      child: ListTile(
+        leading: Text(year),
+        title: Text(month),
       ),
     );
   }

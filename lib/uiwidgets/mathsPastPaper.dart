@@ -1,5 +1,5 @@
 import 'package:playstore_app/datas/promotion.dart';
-import 'package:playstore_app/pastpaper%20folder/Physics_PP_mainscreen.dart';
+import 'package:playstore_app/Physics_Pastpaper/Physics_PP_mainscreen.dart';
 import 'package:playstore_app/screens/Math_mainscreen.dart';
 import 'package:playstore_app/theme/colors.dart';
 import 'package:playstore_app/theme/padding.dart';
@@ -8,6 +8,7 @@ import 'package:playstore_app/datas/mathsNotesUI.dart';
 
 import 'package:flutter_svg/svg.dart';
 import '/screens/SyllabusScreen.dart';
+import '../Math_Pastpaper/Math_PP_Mainscreen.dart';
 
 class MathsPastPaperWidget extends StatelessWidget {
   const MathsPastPaperWidget({Key? key}) : super(key: key);
@@ -75,7 +76,7 @@ class MathsPastPaperWidget extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => PhysicsPastPaper()));
+                              builder: (context) => MathPastPaper()));
                     },
                     child: const Text(
                       'Open',

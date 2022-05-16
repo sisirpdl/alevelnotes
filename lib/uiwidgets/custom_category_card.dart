@@ -4,7 +4,7 @@ import 'package:playstore_app/screens/Physics_mainscreen.dart';
 import 'package:playstore_app/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:playstore_app/pastpaper%20folder/pastpapers.dart';
+import 'package:playstore_app/screens/pastpapers.dart';
 import 'package:playstore_app/uiwidgets/physicsNotes.dart';
 
 import '../screens/FormulaScreen.dart';

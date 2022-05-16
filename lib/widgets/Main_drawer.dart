@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:playstore_app/pastpaper%20folder/pastpapers.dart';
+import 'package:playstore_app/screens/pastpapers.dart';
 import '/screens/ContactUs.dart';
 import '/screens/Homepage.dart';
 import '/screens/SyllabusScreen.dart';
@@ -40,7 +40,8 @@ class MainDrawer extends StatelessWidget {
             color: Colors.white,
             child: Text(
               'alevelNotes',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.normal,color: text),
+              style: TextStyle(
+                  fontSize: 30, fontWeight: FontWeight.normal, color: text),
             ),
           ),
           listtilecreator(Icons.home, 'Home', () {
