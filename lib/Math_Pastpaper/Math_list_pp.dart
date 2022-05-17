@@ -1,30 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:playstore_app/pastpaper%20folder/pdfviewer.dart';
+import './pdf_viewer.dart';
 import 'package:playstore_app/uiwidgets/custom_place_holder.dart';
-import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
 
-class ListPP extends StatelessWidget {
-  final List<String> physicsPPdata;
+class MathListPP extends StatelessWidget {
+  final List<String> MathPPdata;
   final String year;
   final String month;
-  const ListPP(
+  const MathListPP(
       {super.key,
-      required this.physicsPPdata,
+      required this.MathPPdata,
       required this.year,
       required this.month});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("physics past papers"),
-        actions: [ChangeThemeButtonWidget()],
-      ),
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
             // spread operator used.
             children: [
-              ...physicsPPdata.map((e) {
+              ...MathPPdata.map((e) {
                 return Answer(
                   title: e,
                   month: month,

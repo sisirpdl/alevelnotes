@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
             : Colors.blue.shade600;
     return Scaffold(
       // backgroundColor: background,
-      extendBodyBehindAppBar: true,
+      extendBodyBehindAppBar: false,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
         child: AppBar(
@@ -61,18 +61,24 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 ClipPath(
                   clipper: BottomClipper(),
-                  child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: 278,
-                      decoration:
-                          const BoxDecoration(color: Color(0xFF132342))),
+                  child: Align(
+                    alignment: Alignment.center,
+                    widthFactor: 1,
+                    heightFactor: 1,
+                    child: Image.asset('assets/images/vector-yeti.jpg'),
+                  ),
+                  // child: Container(
+                  //     width: MediaQuery.of(context).size.width,
+                  //     height: 278,
+                  //     decoration:
+                  //         const BoxDecoration(color: Color(0xFF132342))),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(
                       left: appPadding, right: appPadding),
                   child: Column(
                     children: <Widget>[
-                      const SizedBox(height: spacer + 50),
+                      const SizedBox(height: spacer - 30),
 
                       //heading
                       Row(
@@ -94,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ))),
                         ],
                       ),
-                      const SizedBox(height: spacer - 22),
+                      const SizedBox(height: spacer + 42),
 
                       //search
                       // const CustomSearchField(

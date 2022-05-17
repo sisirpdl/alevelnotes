@@ -4,7 +4,7 @@ import 'package:playstore_app/screens/Physics_mainscreen.dart';
 import 'package:playstore_app/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:playstore_app/pastpaper%20folder/pastpapers.dart';
+import 'package:playstore_app/screens/pastpapers.dart';
 import 'package:playstore_app/uiwidgets/physicsNotes.dart';
 
 import '../screens/FormulaScreen.dart';
@@ -48,9 +48,9 @@ class CustomCategoryCard extends StatelessWidget {
             child: Container(
               height: size.width * .25,
               width: size.width * .25,
-              padding: const EdgeInsets.fromLTRB(18, 0, 0, 0),
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
               decoration: BoxDecoration(
-                color: textWhite,
+                color: Color.fromARGB(150, 218, 218, 242),
                 borderRadius: BorderRadius.circular(10.0),
                 boxShadow: [
                   BoxShadow(
@@ -62,15 +62,15 @@ class CustomCategoryCard extends StatelessWidget {
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
                     height: 35.0,
                     width: 35.0,
-                    margin: const EdgeInsets.fromLTRB(3, 12, 0, 0),
+                    margin: const EdgeInsets.fromLTRB(0, 12, 0, 0),
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: primary.withOpacity(0.7),
+                      color: primary.withOpacity(0.8),
                       borderRadius: BorderRadius.circular(15.0),
                       boxShadow: [
                         BoxShadow(
@@ -94,6 +94,7 @@ class CustomCategoryCard extends StatelessWidget {
                       fontSize: 16.0,
                       fontWeight: FontWeight.w200,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 0.0),
                 ],

@@ -89,7 +89,7 @@ class MathsNotes extends StatelessWidget {
           ),
           Positioned(
             top: -20.0,
-            left: -30.0,
+            left: -33.0,
             child: Container(
               height: size.width * .4,
               child: SvgPicture.asset(

@@ -1,6 +1,6 @@
 import 'package:playstore_app/datas/physicsNotesUI.dart';
 import 'package:playstore_app/datas/promotion.dart';
-import 'package:playstore_app/pastpaper%20folder/Physics_PP_mainscreen.dart';
+import 'package:playstore_app/Physics_Pastpaper/Physics_PP_mainscreen.dart';
 import 'package:playstore_app/screens/Math_mainscreen.dart';
 import 'package:playstore_app/screens/Physics_mainscreen.dart';
 import 'package:playstore_app/theme/colors.dart';
@@ -80,9 +80,9 @@ class PhysicsPastPaperWidget extends StatelessWidget {
                     child: const Text(
                       'Open',
                       style: TextStyle(
-                        fontSize: 20.0,
+                        fontSize: 15.0,
                         color: textWhite,
-                        fontWeight: FontWeight.w200,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
@@ -92,7 +92,7 @@ class PhysicsPastPaperWidget extends StatelessWidget {
           ),
           Positioned(
             top: -20.0,
-            left: -33.0,
+            left: -35.0,
             child: Container(
               height: size.width * .4,
               child: SvgPicture.asset(

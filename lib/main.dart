@@ -44,9 +44,8 @@ class _MyAppState extends State<MyApp> {
               children: [
                 Lottie.asset("assets/images/rocket_animation.json"),
                 const SizedBox(height: 68),
-                const Text('''Developed By Dr. Arun Joshi
- and Prof. Shishir Poudel
-for beloved alevel students''',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,color: Color(0xFF132342)),)
+                const Text('''Developed By Arun Joshi
+ and Shishir Poudel''',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,color: Color.fromARGB(255, 231, 132, 20)),)
               ],
             ),
             duration: 4300,

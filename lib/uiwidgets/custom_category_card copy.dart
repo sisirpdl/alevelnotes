@@ -4,11 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:playstore_app/screens/Physics_mainscreen.dart';
 import 'package:playstore_app/screens/Math_mainscreen.dart';
-import 'package:playstore_app/pastpaper%20folder/pastpapers.dart';
-
-import '/widgets/Mathformula.dart';
-import '/widgets/Physicsformula.dart';
-import '../screens/FormulaScreen.dart';
 
 class CustomCategoryCardCopy extends StatelessWidget {
   const CustomCategoryCardCopy({
@@ -42,9 +37,9 @@ class CustomCategoryCardCopy extends StatelessWidget {
             child: Container(
               height: size.width * .25,
               width: size.width * .25,
-              padding: const EdgeInsets.fromLTRB(18, 0, 0, 0),
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
               decoration: BoxDecoration(
-                color: textWhite,
+                color:  Color.fromARGB(150, 218, 218, 242),
                 borderRadius: BorderRadius.circular(10.0),
                 boxShadow: [
                   BoxShadow(
@@ -56,12 +51,12 @@ class CustomCategoryCardCopy extends StatelessWidget {
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
                     height: 35.0,
                     width: 35.0,
-                    margin: const EdgeInsets.fromLTRB(3, 12, 0, 0),
+                    margin: const EdgeInsets.fromLTRB(0, 12, 0, 0),
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       color: primary.withOpacity(0.7),
@@ -87,7 +82,7 @@ class CustomCategoryCardCopy extends StatelessWidget {
                       color: secondary,
                       fontSize: 16.0,
                       fontWeight: FontWeight.w200,
-                    ),
+                    ),textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 0.0),
                 ],

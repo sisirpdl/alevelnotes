@@ -25,4 +25,3 @@ const List homePagePhysicsMathsJson = [
     'title': 'Maths',
   },
 ];
-
