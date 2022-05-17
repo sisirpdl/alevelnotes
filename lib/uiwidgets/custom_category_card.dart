@@ -74,7 +74,7 @@ class CustomCategoryCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15.0),
                       boxShadow: [
                         BoxShadow(
-                          color: primary.withOpacity(0.5),
+                          color: primary.withOpacity(0.4),
                           spreadRadius: 0.0,
                           blurRadius: 3.0,
                           offset: const Offset(0, 2),

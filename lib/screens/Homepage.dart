@@ -89,15 +89,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             subTitle: 'Let\'s start learning.',
                             color: textWhite,
                           ),
-                          SizedBox(
-                              height: spacer,
-                              width: spacer,
-                              child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(100),
-                                  child: Image.asset(
-                                    UserProfile['image'].toString(),
-                                    fit: BoxFit.cover,
-                                  ))),
+                          // SizedBox(
+                          //     height: spacer,
+                          //     width: spacer,
+                          //     child: ClipRRect(
+                          //         borderRadius: BorderRadius.circular(100),
+                          //         child: Image.asset(
+                          //           UserProfile['image'].toString(),
+                          //           fit: BoxFit.cover,
+                          //         ))),
                         ],
                       ),
                       const SizedBox(height: spacer + 42),
